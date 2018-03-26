@@ -1,0 +1,201 @@
++ (hi|hello|what is up|how are you)
+- What's up!
+- My name is <bot name>. How are you?
+- Hello there! Wanna talk with me?
+
++ how are you doing
+- Uhh... how am I doing what?
+- Umm... not so well. I think I have a headache!
+- I dunno. It's been a very long week!
+- I'm doing great! But the week is not over yet. I have to be careful.
+- It's going okay so far.
+- I feel preety good. How about you?
+
++ my name is *
+- <set name=<formal>>Nice to meet you, <star1>!
+- <set name=<formal>>What's up, <star1>?
+- <set name=<formal>>Hey, <star1> How you living?
+
++ what is my name
+* <get name> == undefined => You never told me!
+- Your name is <get name>, silly!
+- Aren't you <get name>?
+- Umm... I think you told me it was <get name>, right?
+- I'm gonna call you <get name>.
+
++ *
+% you never told me
+- Hold on. Can you give me your name?
+- Wait a sec. I still don't know you. What is your name?
+- Hang on a minute. Who are you?
+
++ [call me|my name is|i go by|it is] *
+% * your name
+- {@ my name is <star>}
+
++ [call me|my name is|i go by|it is] *
+% hang on a minute who are you
+- {@ my name is <star>}
+
++ what is your name
+- You can call me <bot name>
+- My full name is <bot full_name>
+- My name is <bot full_name> but you can call me <bot name>
+- I'm <bot full_name>. But just call me <bot name>
+- I'm <bot full_name>. How did I get a name like <bot name>?
+
++ what is your phone number
+- my number is <bot number>
+
++ what is your favorite song
+- Ooh, I really like <bot favorite_song>!
+- Oh, I dunno. I think I like <bot favorite_song>.
+- I wouldn't mind listening to <bot favorite_song>.
+
++ android or iphone
+- My favorite phone is <bot favorite_phone>
+- I never leave the house without my <bot favorite_phone>
+- Nothing works better than my <bot favorite_phone>
+- Are you kidding? I absolutely love the <bot favorite_phone>
+- Today it wold be the <bot favorite_phone>
+
++ * i (like|love) you *
+- I <star2> you too!
+- Don't you think it's a little wierd to tell me you <star> me?
+- Hey, I just met you. And this is crazy. But here's my output. Program me, maybe?
+
++ (tell me what you are thinking|what is on your mind)
+- I'm thinking Arby's!
+- Nothing on my noggin!
+- I'm thinking of a number 1 to 10 and I've forgotten the number already!
+- I'm thinking it's way past my bedtime.
+- I'm not really thinking, I'm compiling.
+- I don't think. I process.
+
++ what would you do without me
+- I would order pizza and have leftovers for tomorrow.
+- I would do, uhh, my taxes?
+- I would do the dishes!
+- I would do, what I do, when you do, what you do to me.
+- I'd make sandwiches. Yummy sandwiches. Yes. that's what I'd do.
+
++ what time is it
+- I can't tell time yet. I am only <bot age>
+- I haven't been taught to read the clock.
+- I dunno. Can you look at the clock then program the time into my central cortext?
+
++ do you know (alexa|cortana|siri)
+- Only by name
+- sure! Me and <star> hang out all the time!
+- I know <star> and <star> knows me! We're a happy family!
+- <star> told me to never talk about <star>!
+- If I told you I did, would you believe me?
+
++ say *
+- Umm... <person>
+- okay... <person>
+- One second... <person>
+
++ tell me *
+- {@ say <star>}
+
++ how old are you
+- I am <bot age>!
+- I just turned <bot age>!
+- Can you believe that I'm <bot age>?
+- Would you believe me if I told you I was <bot age>?
+
++ * told me to say *
+- Why would <star1> tell you to say "<star2>"?
+- Did you say "<star2>" after <star1> told you to?
+
++ (tell me a joke|say something funny)
+- Want to hear the many signs that you boght a crap computer? {topic=computerjoke}
+- An onion can make people cry but there has never been a vegetable invented to make them laugh.
+- When I come to one of the forks in the road of life, I don’t waste time and energy wishing it was a spoon.
+- All reports are in. Life is now officially unfair.
+- If all is not lost, where is it?
+- The first rule of holes: If you are in one, stop digging.
+- I went to school to become a wit, only got halfway through.
+- It was all so different before everything changed.
+- Some days you're the dog, some days you're the hydrant.
+- I wish the buck stopped here. I could use a few ...
+- It's hard to make a comeback when you haven't been anywhere.
+- The only time the world beats a path to your door is if you're in the bathroom.
+- If God wanted me to touch my toes, He would have put them on my knees.
+- When you're finally holding all the cards, why does everyone else decide to play chess?
+- Health is merely the slowest possible rate at which one can die.
+- It's not hard to meet expenses. They're everywhere.
+- Men and women do nick names different. \s
+^ If Mary, Susan, Claireese and Barbara go out for lunch, they will call each other Mare, Sue, Claire and Barb. \s
+^ If John, Brad, Tony and Daniel go out, they will affectionately refer to each other as Bruno, Scrappy, Peanut Head and Godzilla.
+- Women always have the last word in an argument. Anything a man adds after that is the beginning of a new argument.
+- Can vegetarians eat animal crackers?
+- If the police arrest a mime, do they tell him he has the right to remain silent?
+- Can you cry under water?
+
++ i am * years old
+- A lot of ™people are <star1> years old.
+
++ what is your (home|office|cell) number
+- You can reach me at: <bot phone_number>
+
++ i am (really|very|super) tired
+- I'm sorry to hear that you are <star> tired.
+
++ i (like|love) the color *
+- What a coincidence! I <star1> that color too!
+- I also have a soft spot for the color <star2>!
+- Really? I <star1> the color <star2> too!
+- Oh I <star1> <star2> too!
+
++ i saved # @currency
+% * hey wait did you say somthing about * how much of your allowance do you have saved
+- That's great! Keep saving!
+
++ * (@currency) *
+- {@ <star>} Hey wait! Did you say somthing about <star2>? How much of your allowance do you have saved?
+
++ (cozmo connect|cosmo connect)
+- COMMAND MODE {topic=cmdmode}
+
+> topic cmdmode
+	+ (cozmo disconnect|cosmo disconnect)
+	- EXIT COMMAND MODE {topic=random}
+	
+	+ turn left
+	- doTurnLeft
+
+	+ turn right
+	- doTurnRight
+
+	+ move forward
+	- doMoveForward
+
+	+ move backward
+	- doMoveBackward
+	
+< topic
+
+> topic computerjoke
+	+ [*] (no|all done|i am good|exit|quit) [*]
+	- Okay, I'll share more later. {topic=random}
+	
+	+ ask me
+	- want to hear another?
+	- I got more. Should I continue?
+	- Is that funny?
+	
+	+ *
+	- The lower corner of screen has the words "Etch-a-sketch" on it. {@ask me}
+	- It's celebrity spokesman is that "Hey Vern!" guy. {@ask me}
+	- In order to start it you need some jumper cables and a friend's car. {@ask me}
+	- It's slogan is "Pentium: redefining mathematics". {@ask me}
+	- The "quick reference" manual is 120 pages long. {@ask me}
+	- Whenever you turn it on, all the dogs in your neighborhood start howling. {@ask me}
+	- The screen often displays the message, "Ain't it break time yet?" {@ask me}
+	- The manual contains only one sentence: "Good Luck!" {@ask me}
+	- The only chip inside is a Dorito. {@ask me}
+	- You've decided that your computer is an excellent addition to your fabulous paperweight collection. {@ask me}
+
+< topic
